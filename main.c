@@ -4,7 +4,7 @@
 #include "src/base64.h"
 
 int main() {
-	char *string = "younes salmi is the best";
+	char *string = "test";
 	size_t inlen = strlen(string);
 	char *out = (char *) malloc(BASE64_ENCODE_OUT_SIZE(inlen));
 	size_t result = base64_encode ( (unsigned const char *) string, inlen, out);
