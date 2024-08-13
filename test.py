@@ -12,6 +12,7 @@ BASE64_ENCODE_OUT_SIZE = lambda x: int(((x + 2) // 3) * 4 + 1)
 BASE64_DECODE_OUT_SIZE = lambda x: int((x // 4) * 3)
 
 def test(strings: List[str]) -> None:
+
     lib = ctypes.CDLL(libname)
     lib.base64_encode.argtypes = [ctypes.c_char_p, ctypes.c_int, ctypes.c_char_p]
     lib.base64_decode.argtypes = [ctypes.c_char_p, ctypes.c_int, ctypes.c_char_p]
