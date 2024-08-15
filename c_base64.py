@@ -10,8 +10,8 @@ class Base64:
     @staticmethod
     def decode(encoded_string: bytes) -> bytes:
 
-        if not isinstance(encoded_string, bytes):
-            raise TypeError(f"Expected bytes-like object, got '{type(encoded_string).__name__}'")
+       # if not isinstance(encoded_string, bytes):
+       #     raise TypeError(f"Expected bytes-like object, got '{type(encoded_string).__name__}'")
 
         output_size = Base64._BASE64_DECODE_OUT_SIZE(len(encoded_string))
         decoded_buffer = ctypes.create_string_buffer(output_size)
@@ -23,8 +23,8 @@ class Base64:
     @staticmethod
     def encode(input_bytes: bytes) -> bytes:
 
-        if not isinstance(input_bytes, bytes):
-            raise TypeError(f"Expected bytes-like object, got '{type(input_bytes).__name__}'")
+       # if not isinstance(input_bytes, bytes):
+       #     raise TypeError(f"Expected bytes-like object, got '{type(input_bytes).__name__}'")
 
         output_size = Base64._BASE64_ENCODE_OUT_SIZE(len(input_bytes))
         encoded_buffer = ctypes.create_string_buffer(output_size)
