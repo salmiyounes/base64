@@ -5,9 +5,9 @@ base64 decode/encode
 ## setup 
 
 ```sh
-$ git clone https://github.com/salmiyounes/base64.git
-$ cd base64
-$ make
+git clone https://github.com/salmiyounes/base64.git
+cd base64
+make
 ```
 
 ## usage
